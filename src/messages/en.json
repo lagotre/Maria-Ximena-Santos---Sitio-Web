@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "cases": "Cases",
+    "insights": "Insights",
+    "contact": "Contact",
+    "cta": "Let's talk about your challenge",
+    "language": "ES"
+  },
+  "hero": {
+    "tagline": "Innovation Consultant · Colombia · LATAM",
+    "headline": "Transforming organizations from the inside out.",
+    "subheadline": "Strategic consultant with 20+ years facilitating innovation, co-creation and cultural transformation processes with executive teams across Latin America.",
+    "cta_primary": "Let's talk about your challenge",
+    "cta_secondary": "Explore her experience",
+    "scroll_hint": "Explore"
+  },
+  "social_proof": {
+    "title": "Organizations that have trusted her work"
+  },
+  "services_preview": {
+    "eyebrow": "What we do",
+    "title": "What we build together",
+    "subtitle": "We don't offer pre-packaged solutions. We design processes that respond to the real challenges of each organization.",
+    "cta": "See all services"
+  },
+  "about_preview": {
+    "eyebrow": "Her story",
+    "title": "More than methodology. Real experience.",
+    "description": "Maria Ximena Santos is not a formula-based consultant. She has founded companies, led organizations, and facilitated strategic conversations in real boardrooms. Her practice comes from having lived the same challenges she now accompanies.",
+    "stat_1_value": "20+",
+    "stat_1_label": "years of practice",
+    "stat_2_value": "50+",
+    "stat_2_label": "organizations accompanied",
+    "stat_3_value": "8+",
+    "stat_3_label": "economic sectors",
+    "cta": "Learn her story"
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What those who've worked with her say"
+  },
+  "group_companies": {
+    "eyebrow": "Business Group",
+    "title": "Allied companies",
+    "subtitle": "An ecosystem of innovation, design and strategy."
+  },
+  "home_cta": {
+    "eyebrow": "First step",
+    "title": "Does your organization need to evolve?",
+    "subtitle": "Let's talk about the challenge you're facing. No formal presentations. No prior commitments.",
+    "cta": "Let's talk about your challenge",
+    "secondary": "or write to hola@mariaximensantos.com"
+  },
+  "services_page": {
+    "eyebrow": "Services",
+    "title": "Processes designed for real challenges",
+    "subtitle": "Each process is designed around your organization's specific challenge. These are the capabilities Maria Ximena brings to each engagement.",
+    "cta_global": "Let's talk about your challenge"
+  },
+  "about_page": {
+    "eyebrow": "About",
+    "title": "A consultant with a story.",
+    "intro": "She didn't arrive at consulting from academia. She arrived from having built companies, led organizations, and participated in board-level conversations. That makes all the difference.",
+    "experience_eyebrow": "Career",
+    "experience_title": "Built from practice",
+    "certifications_eyebrow": "Education",
+    "certifications_title": "The foundations that support the practice",
+    "philosophy_eyebrow": "Philosophy",
+    "philosophy_quote": "The most powerful innovation doesn't come from brilliant methodologies. It comes from teams who dare to look honestly at their reality and consciously choose where they want to go.",
+    "clients_eyebrow": "Clients",
+    "clients_title": "Organizations that have trusted her",
+    "cta_title": "Ready to work together?",
+    "cta": "Let's talk about your challenge"
+  },
+  "cases_page": {
+    "eyebrow": "Cases & Results",
+    "title": "Transformations that matter.",
+    "subtitle": "Each case is different. Each organization has its own context, its own resistance, its own potential. Here's how some of these processes have unfolded.",
+    "testimonials_eyebrow": "Testimonials",
+    "testimonials_title": "In their own words"
+  },
+  "insights_page": {
+    "eyebrow": "Insights",
+    "title": "Reflections from practice.",
+    "subtitle": "Observations on innovation, leadership and organizational transformation accumulated over 20+ years of work with executive teams.",
+    "read_more": "Read article",
+    "categories": {
+      "all": "All",
+      "innovation": "Innovation",
+      "leadership": "Leadership",
+      "culture": "Culture",
+      "facilitation": "Facilitation",
+      "transformation": "Transformation"
+    },
+    "linkedin_cta": "Follow on LinkedIn for more reflections"
+  },
+  "contact_page": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about your challenge.",
+    "subtitle": "We don't need a formal presentation to start a relevant conversation. Tell me about the challenge your organization is facing.",
+    "form_title": "Send a message",
+    "form_name": "Full name",
+    "form_company": "Company / Organization",
+    "form_email": "Email",
+    "form_message": "Tell me about your challenge",
+    "form_message_placeholder": "What challenge is your organization facing? What are you trying to achieve? There's no wrong answer.",
+    "form_submit": "Send message",
+    "form_success": "Message sent. I'll write back soon.",
+    "whatsapp_cta": "Message me on WhatsApp",
+    "linkedin_cta": "Connect on LinkedIn",
+    "or": "or",
+    "direct_contact": "Direct contact"
+  },
+  "footer": {
+    "tagline": "Human-centered innovation for organizations that need to evolve.",
+    "nav_title": "Navigation",
+    "contact_title": "Contact",
+    "follow": "Follow",
+    "copyright": "© 2025 Maria Ximena Santos. All rights reserved.",
+    "location": "Colombia · LATAM · South Florida"
+  }
+}
