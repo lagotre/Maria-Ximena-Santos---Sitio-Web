@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import SectionHeader from '@/components/shared/SectionHeader';
@@ -82,8 +83,14 @@ const certifications = [
 ];
 
 const clients = [
-  'Enel', 'Vecol', 'Andigraf', 'ProColombia',
-  'Cámara de Comercio de Bogotá', 'CESA', 'Claro', 'Schindler',
+  { name: 'Enel',    file: 'enel.png',        w: 90  },
+  { name: 'Vecol',   file: 'vecol.png',        w: 80  },
+  { name: 'Andigraf',file: 'andigraf.jpeg',    w: 100 },
+  { name: 'ProColombia', file: 'procolombia.png', w: 110 },
+  { name: 'Cámara de Comercio de Bogotá', file: 'ccb.png', w: 120 },
+  { name: 'CESA',    file: 'cesa.png',         w: 64  },
+  { name: 'Claro',   file: 'claro.png',        w: 64  },
+  { name: 'Schindler', file: 'schindler.png',  w: 100 },
 ];
 
 interface Props {
@@ -96,27 +103,61 @@ export default function AboutPageClient({ locale }: Props) {
   return (
     <>
       {/* Page header */}
-      <section className="pt-36 pb-20 bg-cream-100 border-b border-cream-300">
+      <section className="pt-36 pb-0 bg-stone-900 overflow-hidden">
         <div className="container-site">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
-            <AnimatedSection className="flex flex-col gap-6">
-              <span className="eyebrow">{t('eyebrow')}</span>
-              <h1 className="font-heading text-display text-stone-900 text-balance">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-0 items-end">
+            <AnimatedSection className="flex flex-col gap-6 pb-16 lg:pb-20">
+              <span className="eyebrow text-bronze-400">{t('eyebrow')}</span>
+              <h1 className="font-heading text-display text-white text-balance">
                 {t('title')}
               </h1>
-              <p className="font-sans text-lg text-stone-500 leading-relaxed max-w-lg">
+              <p className="font-sans text-lg text-stone-400 leading-relaxed max-w-lg">
                 {t('intro')}
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2} className="flex justify-end">
-              <div className="relative w-full max-w-sm aspect-[4/5] bg-cream-200">
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-stone-400">
-                  <div className="w-20 h-20 rounded-full bg-stone-300" />
-                  <p className="text-sm font-sans">Retrato profesional</p>
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-bronze-400/30" aria-hidden="true" />
+            {/* Hero portrait — anchored to bottom of dark section */}
+            <AnimatedSection delay={0.2} className="flex justify-end items-end">
+              <div className="relative w-full max-w-sm lg:max-w-md aspect-[3/4] overflow-hidden">
+                <Image
+                  src="/images/photos/hero.png"
+                  alt="Maria Ximena Santos"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                  sizes="(max-width: 1024px) 384px, 448px"
+                />
               </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* In-action photo strip */}
+      <section className="bg-cream-200 border-b border-cream-300">
+        <div className="container-site py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <AnimatedSection direction="left">
+              <div className="relative aspect-video overflow-hidden">
+                <Image
+                  src="/images/photos/speaker.png"
+                  alt="Maria Ximena Santos como conferencista"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection direction="right" className="flex flex-col gap-4 py-4">
+              <span className="eyebrow">En acción</span>
+              <p className="font-heading text-heading-md text-stone-900">
+                Facilitadora, conferencista y estratega.
+              </p>
+              <p className="font-sans text-base text-stone-500 leading-relaxed">
+                {locale === 'es'
+                  ? 'Con más de 20 años sobre el escenario — en talleres, conferencias y salas de juntas — Maria Ximena lleva la conversación exactamente a donde necesita estar.'
+                  : 'With over 20 years on stage — in workshops, conferences and boardrooms — Maria Ximena takes the conversation exactly where it needs to be.'}
+              </p>
             </AnimatedSection>
           </div>
         </div>
@@ -148,7 +189,7 @@ export default function AboutPageClient({ locale }: Props) {
                   </span>
                 </div>
                 <div className="md:col-span-9 flex flex-col gap-2">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 flex-wrap">
                     <h3 className="font-heading text-xl text-stone-900">
                       {locale === 'es' ? item.role : item.roleEn}
                     </h3>
@@ -219,27 +260,33 @@ export default function AboutPageClient({ locale }: Props) {
         </div>
       </section>
 
-      {/* Clients */}
+      {/* Clients logos */}
       <section className="section-padding-sm bg-page">
         <div className="container-site">
-          <AnimatedSection className="flex flex-col gap-8">
+          <AnimatedSection className="flex flex-col gap-10">
             <SectionHeader
               eyebrow={t('clients_eyebrow')}
               title={t('clients_title')}
             />
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center">
               {clients.map((client, i) => (
                 <motion.div
-                  key={client}
+                  key={client.name}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.06, duration: 0.5 }}
-                  className="py-4 px-6 bg-cream-100 border border-cream-300 flex items-center justify-center"
+                  transition={{ delay: i * 0.07, duration: 0.5 }}
+                  className="flex items-center justify-center py-4 px-4 group"
+                  title={client.name}
                 >
-                  <span className="font-sans text-xs tracking-[0.1em] uppercase text-stone-400 text-center">
-                    {client}
-                  </span>
+                  <Image
+                    src={`/images/logos/${client.file}`}
+                    alt={client.name}
+                    width={client.w}
+                    height={40}
+                    className="object-contain max-h-10 grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                    style={{ width: 'auto', maxWidth: client.w }}
+                  />
                 </motion.div>
               ))}
             </div>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 
 export default function Hero() {
@@ -88,20 +89,17 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="w-full lg:w-auto lg:flex-shrink-0 lg:w-[420px] xl:w-[480px]"
+          className="w-full lg:w-auto flex-shrink-0 lg:w-[420px] xl:w-[480px]"
         >
-          <div className="relative aspect-[4/5] bg-cream-200 overflow-hidden">
-            {/* Photo placeholder */}
-            <div className="absolute inset-0 flex flex-col items-center justify-end p-8 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex flex-col items-center gap-3 text-stone-400">
-                  <div className="w-20 h-20 rounded-full bg-stone-300/60" />
-                  <p className="text-sm font-sans text-center text-stone-400 px-4">
-                    Fotografía profesional de Maria Ximena Santos
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="relative aspect-[4/5] bg-stone-900 overflow-hidden">
+            <Image
+              src="/images/photos/hero.png"
+              alt="Maria Ximena Santos — Consultora de Innovación"
+              fill
+              className="object-cover object-center"
+              priority
+              sizes="(max-width: 1024px) 100vw, 480px"
+            />
             {/* Decorative corner */}
             <div
               className="absolute bottom-6 right-6 w-20 h-20 border-b-2 border-r-2 border-bronze-400/40"

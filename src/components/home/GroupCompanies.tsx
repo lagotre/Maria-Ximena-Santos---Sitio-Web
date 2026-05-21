@@ -1,26 +1,40 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import AnimatedSection from '@/components/shared/AnimatedSection';
+import { motion } from 'framer-motion';
 
 const companies = [
   {
     name: 'Disenni',
-    tagline: 'Diseño estratégico',
-    taglineEn: 'Strategic design',
+    tagline: 'Diseño estratégico e innovación',
+    taglineEn: 'Strategic design & innovation',
+    logoFile: 'disenni.webp',
+    logoWidth: 160,
+    logoHeight: 48,
+    dark: false,
     href: '#',
   },
   {
     name: 'Digitalli',
     tagline: 'Transformación digital',
     taglineEn: 'Digital transformation',
+    logoFile: null,
+    logoWidth: 0,
+    logoHeight: 0,
+    dark: true,
     href: '#',
   },
   {
     name: 'Diforma In Store',
     tagline: 'Experiencia en punto de venta',
     taglineEn: 'Point of sale experience',
+    logoFile: 'diforma.png',
+    logoWidth: 160,
+    logoHeight: 40,
+    dark: true,
     href: '#',
   },
 ];
@@ -29,35 +43,52 @@ export default function GroupCompanies() {
   const t = useTranslations('group_companies');
 
   return (
-    <section className="section-padding-sm bg-cream-50 border-t border-cream-300">
+    <section className="section-padding-sm bg-stone-900 border-t border-stone-800">
       <div className="container-site">
         <AnimatedSection className="flex flex-col gap-10">
           <div className="flex flex-col gap-2">
-            <span className="eyebrow">{t('eyebrow')}</span>
+            <span className="eyebrow text-bronze-400">{t('eyebrow')}</span>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-              <h2 className="font-heading text-heading-md text-stone-900">{t('title')}</h2>
-              <p className="font-sans text-sm text-stone-500">{t('subtitle')}</p>
+              <h2 className="font-heading text-heading-md text-white">{t('title')}</h2>
+              <p className="font-sans text-sm text-stone-400">{t('subtitle')}</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-cream-300">
-            {companies.map((company) => (
-              <a
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-stone-800">
+            {companies.map((company, i) => (
+              <motion.a
                 key={company.name}
                 href={company.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-cream-50 p-8 flex items-center justify-between group hover:bg-cream-100 transition-colors duration-300"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6 }}
+                className="bg-stone-900 p-8 flex items-center justify-between group hover:bg-stone-800 transition-colors duration-300"
               >
-                <div className="flex flex-col gap-1">
-                  <span className="font-heading text-xl text-stone-900">{company.name}</span>
-                  <span className="font-sans text-xs text-stone-400">{company.tagline}</span>
+                <div className="flex flex-col gap-3">
+                  {company.logoFile ? (
+                    <Image
+                      src={`/images/logos/${company.logoFile}`}
+                      alt={company.name}
+                      width={company.logoWidth}
+                      height={company.logoHeight}
+                      className="object-contain max-h-10"
+                      style={{ width: 'auto', maxWidth: company.logoWidth }}
+                    />
+                  ) : (
+                    <span className="font-heading text-2xl text-white tracking-tight">
+                      {company.name}
+                    </span>
+                  )}
+                  <span className="font-sans text-xs text-stone-500">{company.tagline}</span>
                 </div>
                 <ArrowUpRight
                   size={16}
-                  className="text-stone-300 group-hover:text-bronze-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300"
+                  className="text-stone-600 group-hover:text-bronze-400 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300 flex-shrink-0 ml-4"
                 />
-              </a>
+              </motion.a>
             ))}
           </div>
         </AnimatedSection>

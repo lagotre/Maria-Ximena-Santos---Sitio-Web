@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 
@@ -19,14 +20,17 @@ export default function AboutPreview() {
     <section className="section-padding bg-cream-200">
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Photo placeholder */}
+          {/* Photo */}
           <AnimatedSection direction="left" className="order-2 lg:order-1">
-            <div className="relative aspect-[4/5] bg-cream-300 overflow-hidden max-w-sm mx-auto lg:mx-0">
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-stone-400">
-                <div className="w-16 h-16 rounded-full bg-stone-300" />
-                <p className="text-sm font-sans text-center px-8">Retrato profesional</p>
-              </div>
-              {/* Decorative element */}
+            <div className="relative aspect-[4/5] overflow-hidden max-w-sm mx-auto lg:mx-0">
+              <Image
+                src="/images/photos/workshop.png"
+                alt="Maria Ximena Santos facilitando un taller"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 384px, 384px"
+              />
+              {/* Decorative corner */}
               <div
                 className="absolute top-6 left-6 w-16 h-16 border-t-2 border-l-2 border-bronze-400/40"
                 aria-hidden="true"
