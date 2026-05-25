@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://mariaximensantos.com';
+export const dynamic = 'force-static';
+
+const BASE_URL = 'https://mariaximenasantos.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['es', 'en'];

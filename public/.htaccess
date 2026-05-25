@@ -1,0 +1,21 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirect www → non-www
+RewriteCond %{HTTP_HOST} ^www\.mariaximenasantos\.com [NC]
+RewriteRule ^(.*)$ https://mariaximenasantos.com/$1 [R=301,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Serve directory index files (trailing slash)
+DirectoryIndex index.html
+
+# Handle clean URLs: /es/servicios → /es/servicios/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
+
+# Custom 404
+ErrorDocument 404 /es/index.html

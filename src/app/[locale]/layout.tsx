@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: 'website',
       locale: locale === 'es' ? 'es_CO' : 'en_US',
-      url: `https://mariaximensantos.com/${locale === 'es' ? '' : 'en'}`,
+      url: `https://mariaximenasantos.com/${locale === 'es' ? '' : 'en'}`,
       siteName: 'Maria Ximena Santos',
       title: isEs
         ? 'Maria Ximena Santos | Consultora de Innovación · LATAM'
