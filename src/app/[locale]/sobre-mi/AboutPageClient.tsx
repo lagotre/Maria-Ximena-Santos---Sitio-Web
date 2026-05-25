@@ -77,8 +77,8 @@ const certifications = [
   {
     title: 'Diseñadora Industrial',
     titleEn: 'Industrial Designer',
-    institution: 'Universidad Nacional de Colombia',
-    year: '2002',
+    institution: 'Pontificia Universidad Javeriana',
+    year: '1998',
   },
 ];
 

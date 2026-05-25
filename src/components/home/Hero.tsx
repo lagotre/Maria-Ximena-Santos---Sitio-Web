@@ -31,7 +31,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col overflow-hidden bg-cream-100">
       {/* Subtle background grid */}
       <div
-        className="absolute inset-0 opacity-[0.025]"
+        className="absolute inset-0 opacity-[0.025] pointer-events-none"
         style={{
           backgroundImage:
             'linear-gradient(#9B7B52 1px, transparent 1px), linear-gradient(to right, #9B7B52 1px, transparent 1px)',
