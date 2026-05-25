@@ -50,7 +50,7 @@ export default function ContactPageClient({ locale }: Props) {
         </div>
       </section>
 
-      <section className="section-padding bg-page">
+      <section id="formulario" className="section-padding bg-page">
         <div className="container-site grid grid-cols-1 lg:grid-cols-12 gap-16">
           {/* Form */}
           <AnimatedSection className="lg:col-span-7">
@@ -182,7 +182,7 @@ export default function ContactPageClient({ locale }: Props) {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/573000000000"
+              href="https://api.whatsapp.com/send/?phone=573153600354&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-5 p-6 bg-cream-50 border border-cream-300 hover:border-bronze-300 hover:bg-cream-100 transition-all group"
@@ -206,7 +206,7 @@ export default function ContactPageClient({ locale }: Props) {
 
             {/* Email */}
             <a
-              href="mailto:hola@mariaximensantos.com"
+              href="mailto:ximena.santos@disenni.net"
               className="flex items-center gap-5 p-6 bg-cream-50 border border-cream-300 hover:border-bronze-300 hover:bg-cream-100 transition-all group"
             >
               <div className="w-12 h-12 bg-bronze-100 flex items-center justify-center flex-shrink-0">
@@ -228,7 +228,7 @@ export default function ContactPageClient({ locale }: Props) {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/mariaximensantos"
+              href="https://www.linkedin.com/in/maria-ximena-santos-arias-b3267112/?locale=en_US"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-5 p-6 bg-cream-50 border border-cream-300 hover:border-bronze-300 hover:bg-cream-100 transition-all group"

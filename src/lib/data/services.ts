@@ -16,6 +16,40 @@ export interface Service {
 
 export const services: Service[] = [
   {
+    id: 'coaching-empresarial',
+    icon: 'Briefcase',
+    title: 'Coaching Empresarial',
+    titleEn: 'Business Coaching',
+    shortDescription: 'Fortalece el liderazgo y potencia el crecimiento estratégico de tu organización.',
+    shortDescriptionEn: 'Strengthen leadership and drive strategic growth in your organization.',
+    description:
+      'Un proceso intensivo orientado al crecimiento estratégico organizacional mediante el fortalecimiento del liderazgo. Desarrollamos equipos de alto rendimiento, mejoramos la toma de decisiones, optimizamos procesos y preparamos líderes para gestionar el cambio con visión global.',
+    descriptionEn:
+      'An intensive process oriented toward organizational strategic growth through leadership strengthening. We develop high-performance teams, improve decision-making, optimize processes, and prepare leaders to manage change with global vision.',
+    audience: 'Directivos, gerentes medios y profesionales en desarrollo',
+    audienceEn: 'Directors, middle managers, and developing professionals',
+    methodologies: ['Liderazgo Estratégico', 'Equipos de Alto Rendimiento', 'Gestión del Cambio', 'Pensamiento Sistémico'],
+    methodologiesEn: ['Strategic Leadership', 'High-Performance Teams', 'Change Management', 'Systems Thinking'],
+    featured: true,
+  },
+  {
+    id: 'coaching-emprendimiento',
+    icon: 'Rocket',
+    title: 'Coaching de Emprendimiento',
+    titleEn: 'Entrepreneurship Coaching',
+    shortDescription: 'De la idea innovadora al negocio sostenible y rentable.',
+    shortDescriptionEn: 'From innovative idea to a sustainable, profitable business.',
+    description:
+      'Acompañamos a emprendedores en la conversión de ideas innovadoras en negocios sostenibles y rentables. Trabajamos desde 8 pilares: Rendimiento, Innovación, Creatividad, Actitud positiva, Originalidad, Liderazgo, Gestión empresarial y Aprendizaje continuo.',
+    descriptionEn:
+      'We accompany entrepreneurs in converting innovative ideas into sustainable, profitable businesses. We work from 8 pillars: Performance, Innovation, Creativity, Positive attitude, Originality, Leadership, Business management, and Continuous learning.',
+    audience: 'Emprendedores, fundadores y líderes de startups',
+    audienceEn: 'Entrepreneurs, founders, and startup leaders',
+    methodologies: ['Visión Estratégica', 'Modelos de Negocio', 'Gestión Empresarial', 'Innovación Aplicada'],
+    methodologiesEn: ['Strategic Vision', 'Business Models', 'Business Management', 'Applied Innovation'],
+    featured: true,
+  },
+  {
     id: 'innovation-workshops',
     icon: 'Lightbulb',
     title: 'Talleres de Innovación Estratégica',
@@ -67,16 +101,16 @@ export const services: Service[] = [
     featured: true,
   },
   {
-    id: 'strategic-alignment',
+    id: 'coaching-equipos',
     icon: 'Target',
-    title: 'Alineación Estratégica de Equipos',
-    titleEn: 'Team Strategic Alignment',
+    title: 'Coaching de Equipos',
+    titleEn: 'Team Coaching',
     shortDescription: 'Para líderes que necesitan una visión compartida y acción coordinada.',
     shortDescriptionEn: 'For leaders who need shared vision and coordinated action.',
     description:
-      'Diseñamos y facilitamos procesos de alineación estratégica que ayudan a los equipos a construir un entendimiento común. No solo de hacia dónde van, sino de por qué importa y cómo van a llegar juntos.',
+      'Diseñamos y facilitamos procesos de coaching de equipos que ayudan a construir un entendimiento común. No solo de hacia dónde van, sino de por qué importa y cómo van a llegar juntos.',
     descriptionEn:
-      'We design and facilitate strategic alignment processes that help teams build common understanding. Not just of where they are going, but why it matters and how they will get there together.',
+      'We design and facilitate team coaching processes that help build common understanding. Not just of where they are going, but why it matters and how they will get there together.',
     audience: 'Comités de dirección, equipos de VP/Director, empresas familiares',
     audienceEn: 'Executive committees, VP/Director teams, family businesses',
     methodologies: ['Future-Back Planning', 'OKR Facilitation', 'World Café'],

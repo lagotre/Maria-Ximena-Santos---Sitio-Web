@@ -24,7 +24,7 @@ export default function Testimonials() {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-800">
-          {testimonials.map((t_item, i) => (
+          {testimonials.filter((t) => t.featured).map((t_item, i) => (
             <motion.div
               key={t_item.id}
               initial={{ opacity: 0, y: 24 }}

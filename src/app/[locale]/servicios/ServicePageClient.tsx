@@ -2,13 +2,15 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { ArrowRight, Users, Lightbulb, Target, RefreshCw, Map, Star, GitMerge } from 'lucide-react';
+import { ArrowRight, Users, Lightbulb, Target, RefreshCw, Map, Star, GitMerge, Briefcase, Rocket } from 'lucide-react';
 import type { Service } from '@/lib/data/services';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import SectionHeader from '@/components/shared/SectionHeader';
 import { motion } from 'framer-motion';
 
 const iconComponents: Record<string, React.ReactNode> = {
+  Briefcase: <Briefcase size={22} strokeWidth={1.5} />,
+  Rocket: <Rocket size={22} strokeWidth={1.5} />,
   Lightbulb: <Lightbulb size={22} strokeWidth={1.5} />,
   Users: <Users size={22} strokeWidth={1.5} />,
   Puzzle: <Star size={22} strokeWidth={1.5} />,

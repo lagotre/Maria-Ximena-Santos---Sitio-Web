@@ -63,7 +63,7 @@ export default function Header() {
             aria-label="Maria Ximena Santos — Inicio"
           >
             <span className="font-heading text-xl tracking-tight text-stone-900">
-              MX<span className="text-bronze-500">Santos</span>
+              Ximena <span className="text-bronze-500">Santos</span>
             </span>
           </Link>
 

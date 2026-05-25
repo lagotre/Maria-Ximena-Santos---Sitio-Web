@@ -36,14 +36,14 @@ export default function HomeCTA() {
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <Link
-              href={`/${locale}/contacto`}
+              href={`/${locale}/contacto#formulario`}
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-bronze-600 font-sans text-sm tracking-[0.06em] uppercase hover:bg-bronze-50 transition-colors duration-300"
             >
               {t('cta')}
               <ArrowRight size={14} />
             </Link>
             <a
-              href="https://wa.me/573000000000"
+              href="https://api.whatsapp.com/send/?phone=573153600354&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/40 text-white font-sans text-sm tracking-[0.06em] uppercase hover:border-white hover:bg-white/10 transition-all duration-300"

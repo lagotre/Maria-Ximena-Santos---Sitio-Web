@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col gap-6">
             <Link href={`/${locale}`} className="inline-block">
               <span className="font-heading text-2xl text-white tracking-tight">
-                MX<span className="text-bronze-400">Santos</span>
+                Ximena <span className="text-bronze-400">Santos</span>
               </span>
             </Link>
             <p className="font-sans text-sm text-stone-400 leading-relaxed max-w-xs">
@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://linkedin.com/in/mariaximensantos"
+                href="https://www.linkedin.com/in/maria-ximena-santos-arias-b3267112/?locale=en_US"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center border border-stone-700 text-stone-400 hover:text-white hover:border-stone-500 transition-colors"
@@ -41,7 +41,7 @@ export default function Footer() {
                 <Linkedin size={14} />
               </a>
               <a
-                href="https://wa.me/573000000000"
+                href="https://api.whatsapp.com/send/?phone=573153600354&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center border border-stone-700 text-stone-400 hover:text-white hover:border-stone-500 transition-colors"
@@ -50,7 +50,7 @@ export default function Footer() {
                 <MessageCircle size={14} />
               </a>
               <a
-                href="mailto:hola@mariaximensantos.com"
+                href="mailto:ximena.santos@disenni.net"
                 className="w-9 h-9 flex items-center justify-center border border-stone-700 text-stone-400 hover:text-white hover:border-stone-500 transition-colors"
                 aria-label="Email"
               >
@@ -80,14 +80,14 @@ export default function Footer() {
             <p className="eyebrow text-stone-500 mb-5">{tf('contact_title')}</p>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:hola@mariaximensantos.com"
+                href="mailto:ximena.santos@disenni.net"
                 className="font-sans text-sm text-stone-400 hover:text-white transition-colors flex items-center gap-1"
               >
-                hola@mariaximensantos.com
+                ximena.santos@disenni.net
                 <ArrowUpRight size={12} />
               </a>
               <a
-                href="https://wa.me/573000000000"
+                href="https://api.whatsapp.com/send/?phone=573153600354&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-sans text-sm text-stone-400 hover:text-white transition-colors flex items-center gap-1"
@@ -96,7 +96,7 @@ export default function Footer() {
                 <ArrowUpRight size={12} />
               </a>
               <a
-                href="https://linkedin.com/in/mariaximensantos"
+                href="https://www.linkedin.com/in/maria-ximena-santos-arias-b3267112/?locale=en_US"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-sans text-sm text-stone-400 hover:text-white transition-colors flex items-center gap-1"

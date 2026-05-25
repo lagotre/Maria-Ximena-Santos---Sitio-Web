@@ -69,14 +69,14 @@ export default function Hero() {
 
           <motion.div variants={item} className="flex flex-col sm:flex-row items-start gap-4">
             <Link
-              href={`/${locale}/contacto`}
+              href={`/${locale}/contacto#formulario`}
               className="inline-flex items-center gap-2 px-8 py-4 bg-bronze-500 text-white font-sans text-sm tracking-[0.06em] uppercase hover:bg-bronze-600 transition-colors duration-300"
             >
               {t('cta_primary')}
               <ArrowRight size={14} />
             </Link>
             <Link
-              href={`/${locale}/sobre-mi`}
+              href={`/${locale}/casos`}
               className="inline-flex items-center gap-2 px-8 py-4 border border-stone-300 text-stone-700 font-sans text-sm tracking-[0.06em] uppercase hover:border-stone-500 hover:text-stone-900 transition-colors duration-300"
             >
               {t('cta_secondary')}
