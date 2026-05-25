@@ -11,30 +11,21 @@ const companies = [
     name: 'Disenni',
     tagline: 'Diseño estratégico e innovación',
     taglineEn: 'Strategic design & innovation',
-    logoFile: 'disenni.webp',
-    logoWidth: 160,
-    logoHeight: 48,
-    dark: false,
+    logoFile: 'LOGOS DIFORMA GROUP/Logo Disenni.png',
     href: '#',
   },
   {
     name: 'Digitalli',
     tagline: 'Transformación digital',
     taglineEn: 'Digital transformation',
-    logoFile: null,
-    logoWidth: 0,
-    logoHeight: 0,
-    dark: true,
+    logoFile: 'LOGOS DIFORMA GROUP/Logo Digitalli.png',
     href: '#',
   },
   {
-    name: 'Diforma In Store',
+    name: 'Diforma',
     tagline: 'Experiencia en punto de venta',
     taglineEn: 'Point of sale experience',
-    logoFile: 'diforma.png',
-    logoWidth: 160,
-    logoHeight: 40,
-    dark: true,
+    logoFile: 'LOGOS DIFORMA GROUP/Logo Diforma.png',
     href: '#',
   },
 ];
@@ -68,20 +59,15 @@ export default function GroupCompanies() {
                 className="bg-stone-900 p-8 flex items-center justify-between group hover:bg-stone-800 transition-colors duration-300"
               >
                 <div className="flex flex-col gap-3">
-                  {company.logoFile ? (
+                  <div className="h-10 flex items-center">
                     <Image
                       src={`/images/logos/${company.logoFile}`}
                       alt={company.name}
-                      width={company.logoWidth}
-                      height={company.logoHeight}
-                      className="object-contain max-h-10"
-                      style={{ width: 'auto', maxWidth: company.logoWidth }}
+                      width={200}
+                      height={40}
+                      className="h-10 w-auto object-contain object-left"
                     />
-                  ) : (
-                    <span className="font-heading text-2xl text-white tracking-tight">
-                      {company.name}
-                    </span>
-                  )}
+                  </div>
                   <span className="font-sans text-xs text-stone-500">{company.tagline}</span>
                 </div>
                 <ArrowUpRight
